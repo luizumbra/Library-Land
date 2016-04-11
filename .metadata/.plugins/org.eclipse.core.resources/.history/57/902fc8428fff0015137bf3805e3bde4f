@@ -1,0 +1,68 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+@SuppressWarnings("serial")
+public class RegisterBook extends JFrame {
+
+	// Panel
+	private JPanel contentPane;
+
+	// Labels
+	private JLabel authorLabel;
+	private JLabel bookTitleLabel;
+	
+	// Text Fields
+	private JTextField authorTextField;
+	private JTextField bookTitleTextField;
+	
+	// Buttons
+	private JButton registerButton;
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					RegisterBook frame = new RegisterBook();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public RegisterBook() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setExtendedState(MAXIMIZED_BOTH);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		// Author Components
+		authorLabel = new JLabel("Autor: ");
+		authorLabel.setBounds(2, 70, 111, 20);
+		contentPane.add(authorLabel);
+		authorTextField = new JTextField();
+		authorTextField.setBounds(111, 70, 337, 20);
+		authorTextField.setColumns(10);
+		contentPane.add(authorTextField);
+		
+	}
+
+}

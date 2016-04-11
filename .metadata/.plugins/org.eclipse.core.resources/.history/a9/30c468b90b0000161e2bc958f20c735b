@@ -1,0 +1,20 @@
+package controller;
+
+/**
+ * Class to control register of managers, employees, books,
+ * editor and author.
+ * @author luiz
+ *
+ */
+public class RegisterControl {
+	// TODO Register of MAnagers
+	// TODO Register of Employees
+	// TODO Register of Editor
+	// TODO Register of Author
+	
+	// TODO Register of Books
+	public static boolean registerBook(String author, String title) {
+		// FIXME call the functon register book of model
+		return true;
+	}
+}
