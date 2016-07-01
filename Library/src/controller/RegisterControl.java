@@ -15,7 +15,7 @@ public class RegisterControl {
 	// TODO Register of Author
 	
 	// TODO Register of Books
-	public static boolean registerBook(String author, String title) {
+	public static boolean registerBook(BookEntity book) {
 		// FIXME call the function register book of model
 		
 		InsertionModel.insertBook(author, title);

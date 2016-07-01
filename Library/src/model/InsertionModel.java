@@ -7,14 +7,19 @@ package model;
  *
  */
 public class InsertionModel {
+	private static int b;
+	
 	/**
 	 * Here will access the database to insert a book.
 	 * @param author, the author of the book.
 	 * @param title, the title of the book.
 	 */
-	public static boolean insertBook(String author, String title) {
+	public boolean insertBook(String author, String title) {
+		
+		b = 10;
 		
 		// Before to insert we have to select the id of the author inside the database
+		@SuppressWarnings("unused")
 		int idAuthor = SelectionModel.selectIdAuthor(author);
 		
 		// TODO the CRUD of insert book with idAuthor and title.
